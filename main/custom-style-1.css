@@ -1,0 +1,745 @@
+body {
+  background-color: black !important;
+  color: white !important;
+}
+#background {
+    background-image: url(https://i.imgur.com/bB5N5wn.gif) !important;
+}
+
+#start-row-header {
+    background-image: url(https://i.imgur.com/I4uYvnX.png) !important;
+}
+
+#start-top-left,
+#featured-streamers,
+#start-bottom-left,
+#start-bottom-middle {
+    visibility: visible !important;
+}
+
+/* ---------- SCALE ADJUSTMENTS ----------> */
+@media (max-height: 720px) {
+    #start-bottom-right {
+        transform: scale(.8) !important;
+        transform-origin: bottom right !important;
+    }
+}
+
+/* ---------- KILL LEADER ----------> */
+#ui-kill-leader-icon {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-image: url(https://i.imgur.com/1PmSqQx.png) !important;
+}
+
+#ui-kill-leader-wrapper {
+    color: #ffe741 !important;
+    position: absolute !important;
+    right: 112px !important;
+    top: 0 !important;
+}
+
+/* ---------- MAP INFO ----------> */
+#ui-map-info {
+    color: #67e84c !important;
+}
+
+.gas-icon {
+    background-image: url(https://i.imgur.com/NNGPVcu.png) !important;
+}
+
+.danger-icon {
+    background-image: url(https://i.imgur.com/PDEQQ4w.png) !important;
+}
+
+#ui-map-info.js-map-hidden.js-ui-hud-show-icon-pulse {
+    background: #f000 !important;
+    animation: pulse 1s ease-out 2s infinite alternate !important;
+}
+
+@keyframes pulse {
+    0% { background-color: rgba(87, 0, 0, 0.8) !important; }
+    50% { background-color: rgba(210, 3, 3, 0.8) !important; }
+    100% { background-color: rgba(255, 0, 0, 0.8) !important; }
+}
+
+/* ---------- MEDICAL ITEMS ----------> */
+#ui-loot-soda,
+#ui-loot-painkiller,
+#ui-loot-bandage,
+#ui-loot-healthkit {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    position: relative !important;
+    vertical-align: middle !important;
+}
+
+#ui-loot-soda {
+    display: inline-grid !important;
+    grid-template-columns: auto 45px !important;
+    gap: 13px !important;
+}
+
+#ui-loot-soda img.ui-loot-image,
+#ui-loot-painkiller img.ui-loot-image,
+#ui-loot-bandage img.ui-loot-image,
+#ui-loot-healthkit img.ui-loot-image {
+    opacity: 0 !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: block !important;
+}
+
+#ui-loot-soda::after {
+    content: "" !important;
+    width: 32px !important;
+    height: 32px !important;
+    background-image: url("https://i.imgur.com/sMXhpzq.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    grid-column: 2 !important;
+    justify-self: center !important;
+    align-self: center !important;
+}
+
+#ui-loot-soda.image-left::after { grid-column: 1 !important; }
+
+#ui-loot-painkiller::after {
+    content: "" !important;
+    width: 128px !important;
+    height: 128px !important;
+    background-image: url("https://i.imgur.com/yp00TxA.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: 65px !important;
+    background-size: contain !important;
+    margin-top: 1px !important;
+}
+
+#ui-loot-bandage::after {
+    content: "" !important;
+    width: 128px !important;
+    height: 128px !important;
+    background-image: url("https://i.imgur.com/CWfrGMt.jpeg") !important;
+    background-repeat: no-repeat !important;
+    background-position: 70px !important;
+    background-size: contain !important;
+    margin-top: 1px !important;
+}
+
+#ui-loot-healthkit::after {
+    content: "" !important;
+    width: 128px !important;
+    height: 128px !important;
+    background-image: url("https://i.imgur.com/THdsXrq.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: 70px !important;
+    background-size: contain !important;
+    margin-top: 1px !important;
+}
+
+/* ---------- MENU EDITING ----------> */
+.menu-option {
+    border-radius: 0 !important;
+    border-color: rgba(255, 255, 255, 0) !important;
+}
+
+.menu-block { max-height: 290px !important; }
+
+.btn-green,
+.btn-team-option,
+.account-details-button-wrapper,
+#btn-pass-locked,
+#btn-customize {
+    border-bottom: 0 !important;
+    background: #9d57ff !important;
+    color: #fff !important;
+    box-shadow: inset 0 -2px rgba(0, 0, 0, 0) !important;
+}
+
+#btn-customize {
+    background-image: url(https://survev.io/img/emotes/surviv.svg) !important;
+    background-position: 8px 5px !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+    color: #9d57ff !important;
+    box-shadow: inset 0 -2px rgba(0, 0, 0, 0.4) !important;
+}
+
+.btn-start-option {
+    vertical-align: bottom !important;
+    margin-right: 8px !important;
+    margin-bottom: 0 !important;
+    width: 48px !important;
+    height: 42px !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-color: #9d57ff !important;
+    box-shadow: inset 0 -4px rgba(0, 0, 0, 0.24) !important;
+}
+
+.btn-account-turq {
+    background-color: #9d57ff !important;
+    border-bottom: 2px solid transparent !important;
+    box-shadow: inset 0 -2px transparent !important;
+    text-shadow: none !important;
+}
+
+.btn-account-grey {
+    background-color: #ea0000 !important;
+    border-bottom: 2px solid #ea0000 !important;
+    box-shadow: inset 0 -2px #f00 !important;
+    margin-top: 24px !important;
+    text-shadow: none !important;
+}
+
+.btn-account-disabled {
+    cursor: default !important;
+    filter: brightness(60%) !important;
+}
+
+.account-details-user { cursor: pointer !important; display: flex !important; }
+
+#btn-help {
+    border-bottom: 0 !important;
+    font-size: 0px !important;
+    height: 0px !important;
+}
+
+/* ---------- LOADOUT EDITING ----------> */
+#modal-customize-body {
+    background-color: #9d57ff !important;
+    color: #000 !important;
+    height: auto !important;
+}
+
+#modal-customize-header,
+#modal-customize-footer {
+    background-color: #5404c6 !important;
+    color: #fff !important;
+}
+
+#modal-customize-header { height: 122px !important; }
+#modal-customize-footer { height: 56px !important; }
+
+.modal-content-right {
+    background: #b07ef7 !important;
+    border: 6px solid transparent !important;
+    border-radius: 5px !important;
+    bottom: 0 !important;
+    display: none !important;
+    pointer-events: initial !important;
+    position: fixed !important;
+    right: 0 !important;
+    width: 330px !important;
+}
+
+/* ---------- KEYBIND EDITING ----------> */
+#ui-modal-keybind-body,
+#ui-modal-keybind-header,
+#ui-modal-keybind-footer {
+    background-color: #a300ff !important;
+}
+
+#ui-modal-keybind-body { color: #000 !important; }
+#ui-modal-keybind-footer {
+    color: #fff !important;
+    height: 60px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+/* ---------- IN-GAME MENU ----------> */
+.btn-game-menu {
+    text-align: center !important;
+    line-height: 38px !important;
+    display: block !important;
+    width: 100% !important;
+    height: 40px !important;
+    border: 0 !important;
+    border-radius: 5px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    margin: 5px auto !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    text-shadow: 0 1px 2px #000 !important;
+    background-color: #9d57ff !important;
+    border-bottom: 2px solid #9d57ff !important;
+    box-shadow: inset 0 -2px #9d57ff !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer !important;
+}
+/* ---------- DEATH MENU ----------> */
+.ui-stats-header-title {
+    font-weight: 700 !important;
+    font-size: 48px !important;
+    margin: 10px !important;
+    color: red !important;
+}
+
+#ui-stats-logo {
+    background-image: url(https://i.imgur.com/I4uYvnX.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 264px !important;
+    background-position: center !important;
+    height: 125px !important;
+    position: absolute !important;
+    left: 20px !important;
+    top: 8px !important;
+    width: 264px !important;
+}
+
+/* ---------- SPECTATE MENU ----------> */
+#ui-spectate-options {
+    position: relative !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.25) !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4) !important;
+    box-shadow: inset 0 -2px rgba(0, 0, 0, 0.4) !important;
+    cursor: pointer !important;
+    pointer-events: all !important;
+    width: 100% !important;
+}
+
+#ui-spectate-options-wrapper {
+    color: #fff !important;
+    cursor: default !important;
+    display: block !important;
+    left: 12px !important;
+    position: absolute !important;
+    top: 12px !important;
+}
+
+@media (max-height: 768px),
+(max-width: 1200px) {
+    #ui-spectate-options-wrapper {
+        transform: scale(.85) !important;
+        transform-origin: top left !important;
+    }
+}
+
+#ui-spectate-buttons {
+    display: inline-block !important;
+    padding: 8px 8px 0 !important;
+    text-align: center !important;
+    width: 192px !important;
+}
+
+#ui-spectate-options a {
+    position: relative !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) !important;
+    background: #9d57ff !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4) !important;
+    box-shadow: inset 0 -2px rgba(0, 0, 0, 0.4) !important;
+    cursor: pointer !important;
+}
+
+#btn-spectate-prev-player { margin-bottom: 24px !important; }
+
+#ui-spectate-stats {
+    vertical-align: top !important;
+    display: none !important;
+}
+
+#ui-spectate-stats-header {
+    text-align: center !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    padding: 8px !important;
+}
+
+#ui-spectate-stats-table {
+    width: 100% !important;
+    background-color: transparent !important;
+    margin: auto 0 auto auto !important;
+    border-collapse: collapse !important;
+}
+
+#ui-spectate-stats tbody,
+#ui-spectate-stats td,
+#ui-spectate-stats th {
+    padding: 0 8px 8px 16px !important;
+    font-size: 18px !important;
+}
+
+.ui-spectate-stats-category {
+    width: 130px !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.ui-spectate-stats-value {
+    width: 75px !important;
+    color: #fff !important;
+}
+
+/* ---------- TEAM RELATED ----------> */
+@media (max-width: 850px),
+       (max-width: 900px) and (min-resolution: 3dppx) {
+    .btn-team-option { border-bottom: none !important; }
+}
+
+#btn-team-leave {
+    background: #9d57ff !important;
+    border-bottom: 2px solid #9d57ff !important;
+    bottom: -32px !important;
+    box-shadow: inset 0 -2px #9d57ff !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    position: absolute !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) !important;
+    right: 14px !important;
+    top: 20px !important;
+    transform: scale(1) !important;
+    transform-origin: top right !important;
+    width: 140px !important;
+}
+
+#btn-team-mobile-link-leave {
+    background: #9d57ff !important;
+    border-bottom: 2px solid rgba(62, 62, 62, 0) !important;
+    bottom: 40px !important;
+    box-shadow: inset 0 -2px rgba(62, 62, 62, 0) !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    position: absolute !important;
+    right: 5px !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) !important;
+    width: 190px !important;
+}
+
+/* ---------- TOP LEFT HUD ----------> */
+#ui-top-left {
+    position: absolute !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    top: 12px !important;
+    left: 12px !important;
+    display: block !important;
+}
+
+@media (max-height: 768px),
+       (max-width: 1200px) {
+    #ui-top-left {
+        transform-origin: top left !important;
+        transform: scale(.85) !important;
+    }
+}
+
+#team-desc-text span#invite-link-text {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+
+#team-desc-text span {
+    color: #9d57ff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+/* ---------- TEAM MENU MEMBER ICONS ----------> */
+.team-menu-member > .icon-leader {
+    background-image: url(https://png.pngtree.com/png-vector/20250419/ourmid/pngtree-purple-flower-vector-png-image_16051780.png) !important;
+}
+
+.team-menu-member > .icon-kick {
+    background-image: url(https://i.imgur.com/wu2LAeo.png) !important;
+    background-position: 49% !important;
+    background-size: 65% !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+}
+
+#team-code-text {
+    display: block !important;
+    font-size: 18px !important;
+    margin: 2px auto 0 !important;
+    color: #9d57ff !important;
+    font-weight: 700 !important;
+    width: 60% !important;
+}
+
+/* ---------- COPY ITEM ----------> */
+.copy-item {
+    display: inline-block !important;
+    position: relative !important;
+    top: 8px !important;
+    height: 32px !important;
+    width: 32px !important;
+    border: none !important;
+    background-color: transparent !important;
+    background-size: 32px !important;
+    background-image: url(https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-lavender-clipart-the-lavender-flowers-are-a-bright-purple-illustration-cartoon-vector-png-image_6803654.png) !important;
+    cursor: pointer !important;
+}
+
+.copy-toast {
+    opacity: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    font-size: 18px !important;
+    color: #9d57ff !important;
+}
+/* ---------- TEAM MEMBER UI ----------> */
+.ui-bg-standard {
+    background: rgba(0, 0, 0, 0.24) !important;
+    border-radius: 5px !important;
+}
+
+.ui-team-member {
+    display: none !important;
+    position: relative !important;
+    width: 200px !important;
+    height: 32px !important;
+    padding: 4px !important;
+    margin-bottom: 8px !important;
+}
+
+.ui-team-member-name {
+    font-weight: 700 !important;
+    text-shadow: 1px 1px 0 #000 !important;
+    font-size: 16px !important;
+    max-width: 180px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.ui-team-member-color {
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+    border-radius: 7px !important;
+    width: 14px !important;
+    height: 14px !important;
+}
+
+/* ---------- TEAM MEMBER STATUS ----------> */
+.ui-team-member-status {
+    display: none !important;
+    position: absolute !important;
+    top: 4px !important;
+    right: -38px !important;
+    width: 32px !important;
+    height: 32px !important;
+    background-size: 32px !important;
+    background-repeat: no-repeat !important;
+}
+
+.ui-team-member-status-downed,
+.ui-team-member-status-dead,
+.ui-team-member-status-disconnected {
+    display: block !important;
+}
+
+.ui-team-member-status-downed {
+    border-radius: 16px !important;
+    background-image: url(https://i.imgur.com/FOwNj6q.png) !important;
+}
+
+.ui-team-member-status-dead {
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/013/666/483/small_2x/tombstone-in-the-cemetery-during-halloween-png.png) !important;
+    opacity: 0.5 !important;
+}
+
+.ui-team-member-status-disconnected {
+    background-image: url(https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-wifi-network-disconnected-internet-connection-png-image_5172136.png) !important;
+    opacity: 0.5 !important;
+}
+
+/* ---------- TEAM MEMBER HEALTH ----------> */
+.ui-team-member-health {
+    margin-top: 4px !important;
+}
+
+.ui-team-member-health .ui-bar-inner {
+    background-color: #00ff10 !important;
+    z-index: 1 !important;
+    position: absolute !important;
+    border-radius: 4px !important;
+    width: 200px !important;
+    height: 10px !important;
+    transition: width 0s ease-out !important;
+}
+
+.ui-team-member-health .ui-bar-danger {
+    background: rgba(255, 0, 0, 0.8) !important;
+    animation: pulse 0.5s ease-out infinite alternate !important;
+}
+
+.ui-team-member-health .ui-health-depleted {
+    z-index: 0 !important;
+    background: #929292 !important;
+    transition: width 1s ease-out !important;
+}
+
+/* ---------- AMMO / LOOT EDITING ----------> */
+.ui-loot-overlay {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1024px-HD_transparent_picture.png") no-repeat center center !important;
+    background-size: cover !important;
+    transform: scale(1,1) !important;
+}
+
+#ui-loot-12gauge,
+#ui-loot-762mm,
+#ui-loot-556mm,
+#ui-loot-9mm,
+#ui-loot-50AE,
+#ui-loot-45acp,
+#ui-loot-flare {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Hide default images */
+#ui-loot-12gauge img.ui-loot-image,
+#ui-loot-762mm img.ui-loot-image,
+#ui-loot-556mm img.ui-loot-image,
+#ui-loot-9mm img.ui-loot-image,
+#ui-loot-50AE img.ui-loot-image,
+#ui-loot-45acp img.ui-loot-image,
+#ui-loot-flare img.ui-loot-image {
+    display: none !important;
+}
+
+/* Transform & gap adjustments */
+#ui-loot-12gauge { gap: 2px !important; transform: translateY(-45px) !important; }
+#ui-loot-762mm   { gap: 1px !important; transform: translateY(-43px) !important; }
+#ui-loot-556mm   { gap: 2px !important; transform: translateY(-42px) !important; }
+#ui-loot-9mm     { gap: 2px !important; transform: translateY(-19px) !important; }
+#ui-loot-50AE    { gap: 2px !important; transform: translateY(-20px) !important; }
+#ui-loot-45acp   { gap: 2px !important; transform: translateY(-42px) !important; }
+#ui-loot-flare   { gap: 2px !important; transform: translateY(-42px) !important; }
+
+/* Actual loot images */
+#ui-loot-12gauge::after { content: "" !important; display: block !important; width: 32px !important; height: 32px !important; background: url("https://i.imgur.com/FSeF6Pz.png") no-repeat center/contain !important; margin-top: 2px !important; }
+#ui-loot-762mm::after   { content: "" !important; display: block !important; width: 32px !important; height: 32px !important; background: url("https://i.imgur.com/YEjKFeX.png") no-repeat center/contain !important; margin-top: 2px !important; }
+#ui-loot-556mm::after   { content: "" !important; display: block !important; width: 32px !important; height: 32px !important; background: url("https://i.imgur.com/jRQjNgL.png") no-repeat center/contain !important; margin-top: 2px !important; }
+#ui-loot-9mm::after     { content: "" !important; display: block !important; width: 32px !important; height: 32px !important; background: url("https://i.imgur.com/htcfw90.png") no-repeat center/contain !important; margin-top: 2px !important; }
+#ui-loot-50AE::after    { content: "" !important; display: block !important; width: 32px !important; height: 32px !important; background: url("https://i.imgur.com/NWi1Sav.png") no-repeat center/contain !important; margin-top: 2px !important; }
+#ui-loot-45acp::after   { content: "" !important; display: block !important; width: 32px !important; height: 32px !important; background: url("https://i.imgur.com/gG6iLrw.png") no-repeat center/contain !important; margin-top: 2px !important; }
+#ui-loot-flare::after   { content: "" !important; display: block !important; width: 32px !important; height: 32px !important; background: url("https://i.imgur.com/8PUySaO.png") no-repeat center/contain !important; margin-top: 2px !important; }
+
+/* ---------- DEATH SCREEN ----------> */
+.ui-stats-info-player {             
+    position: relative !important;
+    width: 255px !important;
+    top: 10px !important;
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    border-radius: 4px !important;
+    border: 2px solid black !important;
+    transform: translateX(-50%) !important;
+}
+
+.ui-stats-info-player-name {
+    color: #9d57ff !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    font-style: italic !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 120px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.ui-stats-info-status:after {
+    background-image: url(https://i.imgur.com/6kC75JH.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 200px !important;
+    content: "" !important;
+    display: block !important;
+    height: 395% !important;
+    left: initial !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    top: -135% !important;
+    width: 100% !important;
+    z-index: -1 !important;
+}
+
+/* ---------- ADREN / BOOST EDITING ----------> */
+#ui-boost-counter .ui-boost-base {
+    height:10px !important;
+    margin-bottom: 5px !important;
+}
+
+#ui-boost-counter-0 .ui-bar-inner { background: #3c245e !important; }
+#ui-boost-counter-1 .ui-bar-inner { background: #976ad7 !important; }
+#ui-boost-counter-2 .ui-bar-inner { background: #ccaff6 !important; }
+#ui-boost-counter-3 .ui-bar-inner { background: #e7d6ff !important; }
+
+.ui-boost-base .ui-bar-inner {
+    border-radius: inherit !important;
+    width: 20px !important;
+    height: 10px !important;
+}
+
+/* ---------- HEALTH BAR ----------> */
+#ui-health-actual.ui-bar-inner {
+  background: rgba(227, 0, 255, .8) !important;
+  animation-name: pulsewhite !important;
+  animation-duration: 100s !important;
+  animation-timing-function: ease-out !important;
+  animation-delay: 0s !important;
+  animation-direction: alternate !important;
+  animation-iteration-count: infinite !important;
+  animation-fill-mode: none !important;
+  animation-play-state: running !important;
+}
+
+.health-bar-pulse { animation: pulsewhite 1s linear infinite !important; }
+
+@keyframes pulsewhite {
+  0%, 50%, 100% { background-color: #b07ef7 !important; }
+}
+
+/* ---------- ALIVE COUNTER ----------> */
+#ui-leaderboard-wrapper {
+  position: absolute !important;
+  color: #976ad7 !important;
+  font-size: 16px !important;
+  top: 12px !important;
+  right: 12px !important;
+  display: flex !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  width: 85px !important;
+}
+
+/* ---------- KILLFEED ----------> */
+#ui-killfeed-contents .killfeed-div {
+  position: absolute !important;
+  right: 100px !important;
+  background-color: rgba(0, 0, 0, .2) !important;
+  padding: 4px 8px !important;
+  border-radius: 2px !important;
+  height: 22px !important;
+  line-height: 24px !important;
+}
+
+#ui-killfeed-0 .killfeed-text,
+#ui-killfeed-1 .killfeed-text,
+#ui-killfeed-2 .killfeed-text,
+#ui-killfeed-3 .killfeed-text,
+#ui-killfeed-4 .killfeed-text,
+#ui-killfeed-5 .killfeed-text {
+    background: linear-gradient(to right,#3f147b 0%,#3f147b 20%,#7041a8 50%,#9166cc 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: bold !important;
+}
