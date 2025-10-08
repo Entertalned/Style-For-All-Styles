@@ -1,9 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "Simple CSS Test",
+  "name": "CSS Toggle Extension",
   "version": "1.0",
-  "permissions": ["scripting", "activeTab"],
+  "description": "Toggle two custom CSS files on and off.",
+  "permissions": ["scripting","storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "popup.html"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "custom-style-1.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
