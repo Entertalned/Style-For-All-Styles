@@ -1,34 +1,36 @@
-const button = document.getElementById('toggleBtn');
-let injected = false;
+const toggle = document.getElementById('toggleSwitch');
 
-button.addEventListener('click', async () => {
+// Restore previous toggle state
+chrome.storage.local.get('lavenderRainEnabled', (data) => {
+  toggle.checked = !!data.lavenderRainEnabled;
+});
+
+// Handle toggle clicks
+toggle.addEventListener('change', async () => {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  if (!tab || !tab.id) return;
 
-  if (!tab) return;
-
-  if (!injected) {
+  if (toggle.checked) {
     try {
       await chrome.scripting.insertCSS({
         target: { tabId: tab.id },
-        files: ['custom-style.css']
+        files: ['custom-style-1.css']  // ✅ correct filename
       });
-      injected = true;
-      button.textContent = "Remove CSS";
-      console.log("CSS injected");
-    } catch (e) {
-      console.error("Failed to inject CSS:", e);
+      chrome.storage.local.set({ lavenderRainEnabled: true });
+      console.log("Lavender Rain ON");
+    } catch (err) {
+      console.error("Failed to insert CSS:", err);
     }
   } else {
     try {
       await chrome.scripting.removeCSS({
         target: { tabId: tab.id },
-        files: ['custom-style.css']
+        files: ['custom-style-1.css']  // ✅ must match exactly
       });
-      injected = false;
-      button.textContent = "Toggle CSS";
-      console.log("CSS removed");
-    } catch (e) {
-      console.error("Failed to remove CSS:", e);
+      chrome.storage.local.set({ lavenderRainEnabled: false });
+      console.log("Lavender Rain OFF");
+    } catch (err) {
+      console.error("Failed to remove CSS:", err);
     }
   }
 });
